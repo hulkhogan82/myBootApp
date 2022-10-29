@@ -1,0 +1,44 @@
+nav {
+    background: rgba(255, 247, 0, 0.506);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.flex-container {
+    display: flex;
+
+}
+
+.flex-div {
+    padding: 15px;
+    margin: 10px;
+    flex: 1;
+    border: 2px;
+    border-style:solid;
+    border-color:red;
+    font-size:large;
+}
+
+@media screen and (min-width: 800px) {
+    /* applies styles to any device screen sizes above 800px wide */
+    
+  }
+
+  @media screen and (max-width: 800px) {
+    /* applies styles to any device screen sizes below 800px wide */
+    .flex-div {
+        padding: 15px;
+        margin: 10px;
+        flex: 1;
+        border: 2px;
+        border-style: dotted;
+        border-color: blue;
+        font-size:small;
+    }
+    nav{
+        flex-direction: column;
+    }
+  }

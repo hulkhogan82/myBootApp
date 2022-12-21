@@ -1,61 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap 101 Template</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Balance Web Development</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">About</a></li>
-              <li class="dropdown">
-                <a
-                  href="#"
-                  class="dropdown-toggle"
-                  data-toggle="dropdown"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Services<span class="caret"></span
-                ></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Development</a></li>
-                  <li><a href="#">Consulting</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 101 Template</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="light-theme">
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Balance Web Development</a>
         </div>
-      </nav>
-    <h1>Hello, world!</h1>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services<span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Consulting</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <h1>Hello, world!</h1>
+  <div ng-app="myApp" ng-controller="myCtrl as c">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <h1>Hello {{c.testName}} and {{name}}</h1>
+    <h1>{{firstName + ' ' + lastName}}</h1>
+    <my-html-directive></my-html-directive>    
+    <br>
+    <span>{{c.verbiage}}</span>
+    <br>
+    {{c.priceMatrix}}
+    <br> <br>
+    <span>c.priceMatrixCount: {{c.priceMatrix.length}}</span><br>
+    <span>c.priceMatrixObjectCount: {{Object.keys(c.priceMatrixObj)}}</span><br>
+    <span>priceMatrixObj2: {{c.priceMatrixObj2}}</span><br>
+    <span>priceMatrixObj2: {{Object.keys(c.priceMatrixObj2).length}} </span>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    <ul>
+      <li ng-repeat="person in people">
+        <label>
+            {{person.name}}
+            <input type="radio" ng-model="myObj.person" name="sameName" ng-value="person" />
+        </label>
+      </li>
+    </ul>
+
+    <div>Radio Demo</div>
+    Selected radio is {{c.selectedContact}}
+    <div ng-repeat="phone in c.phones">
+      {{phone}}
+      <input type="radio" name="{{phone.type}}" value="{{phone.value}}" ng-model="c.selectedContact"/>
+      <label>{{phone.value}}</label>
+    </div>
+    <span class="buttons-flex">
+      <button name="Continue">Continue</button>
+      <button name="Cancel">Cancel</button>      
+    </span>
+  <div>
+      <span>Test Span Text: Hello {{c.testName}}</span>
+    </div>
+  <div>
+    <!-- Angular app ends-->
+  </div>
+  <br/>
+    <div class="square">test sq</div>
+    <h1>Task List</h1>
+    <p id="msg">Current tasks:</p>
+    <ul>
+      <li class="list">Add visual styles</li>
+      <li class="list">Add light and dark themes</li>
+      <li>Enable switching the theme</li>
+    </ul>
+    <div>
+      <button class="btn">Dark</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
 </html>

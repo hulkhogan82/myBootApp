@@ -119,12 +119,30 @@
     </div>
     <div class="page-header"></div>
 
-    <div class="alert alert-success">
-      <strong>Success!</strong> Angular app code starts below.
+    <div class="alert alert-success alert-dismissible fade in">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Success!</strong> Angular app code starts below. You should <a href="#" class="alert-link">read this
+        message</a>
     </div>
     <div class="alert alert-info">
       <strong>Info!</strong> Angular app code starts below.
     </div>
+
+    <div class="page-header">
+      <button type="button" class="btn">Basic</button>
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-link">Link</button>
+      <a href="#" class="btn btn-info" role="button">Link Button</a>
+      <input type="button" class="btn btn-info" value="Input Button">
+      <input type="submit" class="btn btn-success btn-lg active" value="Submit Button Large">
+      <input type="submit" class="btn btn-success btn-block disabled" value="Button Block">
+    </div>
+
     <p>Name : <input type="text" ng-model="name"></p>
     <h1>Hello {{c.testName}} and {{name}}</h1>
     <!--<h1>I am {{firstName + ' ' + lastName}}</h1>-->

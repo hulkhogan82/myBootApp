@@ -1,0 +1,1 @@
+Adding bootstrap file is not letting body formatting and background to be applied.

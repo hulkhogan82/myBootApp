@@ -4,15 +4,17 @@
     --black: #000000;
 }
 
-* {
+/** {
     color: var(--fontColor);
     font-family: helvetica;
 }
 
 body {
-    /*font-family: monospace;*/
+    font-family: monospace;
     background: var(--bg);
 }
+*/
+
 
 ul {
     font-family: helvetica;
@@ -67,12 +69,17 @@ li {
     margin: 10px;
     height: 50px;
     width: 50px;
-  }
+}
 
-  .buttons-flex {
+.buttons-flex {
     display: flex;
     flex-direction: row;
-  }
-  .buttons-flex :nth-child(1) { order: 2; }
-  .buttons-flex :nth-child(2) { order: 1; }
-        
+}
+
+.buttons-flex :nth-child(1) {
+    order: 2;
+}
+
+.buttons-flex :nth-child(2) {
+    order: 1;
+}

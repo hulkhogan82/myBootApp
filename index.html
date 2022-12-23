@@ -142,7 +142,87 @@
       <input type="submit" class="btn btn-success btn-lg active" value="Submit Button Large">
       <input type="submit" class="btn btn-success btn-block disabled" value="Button Block">
     </div>
+    <div class="btn-group btn-lg page-header">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Nesting Button Groups &
+          Dropdown Menus <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Tablet</a></li>
+          <li><a href="#">Smartphone</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Split Button Dropdowns</button>
+        <button type="button" class="btn btn-primary">Badge Example <span class="badge">7</span></button>
+        <button type="button" class="btn btn-primary">Badge Example <span class="label label-default">7</span></button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Tablet</a></li>
+          <li><a href="#">Smartphone</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-header">
+      <h5>Label Example <span class="label label-success">Label Example</span></h5>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+          style="width:70%">70%</div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40"
+          aria-valuemin="0" aria-valuemax="100" style="width:40%">40% Complete (success)</div>
+      </div>
 
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Private</a></li>
+        <li><a href="#">Pictures</a></li>
+        <li class="active">Vacation</li>
+      </ul>
+      <ul class="pager">
+        <li class="previous"><a href="#">Previous</a></li>
+        <li class="next"><a href="#">Next</a></li>
+      </ul>
+
+      <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>
+      <p>Envelope icon as a link:
+        <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+      </p>
+      <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+      <p>Search icon on a button:
+        <button type="button" class="btn btn-default">
+          <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+      </p>
+    </div>
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">Panel Heading</div>
+        <div class="panel-body">Panel Content</div>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">Panel Heading</div>
+        <div class="panel-body">Panel Content</div>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+    </div>
+    <div class="panel panel-default dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Dropdown Example with Aria Labels
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li class="dropdown-header"><Dropdown header 1</li>
+        <li role="presentation"><a role="menuitem" href="#">HTML</a></li>
+        <li role="presentation"><a role="menuitem" href="#">CSS</a></li>
+        <li class="divider"></li>
+        <li role="presentation"><a role="menuitem" href="#">JavaScript</a></li>
+      </ul>
+    </div>
     <p>Name : <input type="text" ng-model="name"></p>
     <h1>Hello {{c.testName}} and {{name}}</h1>
     <!--<h1>I am {{firstName + ' ' + lastName}}</h1>-->
